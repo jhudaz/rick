@@ -6,7 +6,7 @@ import './App.scss';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <Router>
           <div>
             <Route exact path="/" component={Home} />
