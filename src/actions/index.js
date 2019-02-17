@@ -1,1 +1,1 @@
-export * from './action-home';
+export * from './action-courses';

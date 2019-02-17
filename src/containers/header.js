@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../styles/header.scss';
+import '../App.scss';
 
 class Header extends Component {
   render() {
@@ -8,7 +8,7 @@ class Header extends Component {
       <div className="header">
 
         <ul>
-          <li><brand>ce broker</brand></li>
+          <li>ce broker</li>
           <li>Features</li>
           <li>Plans</li>
           <li>Organizations</li>
