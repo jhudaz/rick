@@ -1,6 +1,23 @@
+$color: #ffff;
+$bgNav: #224cc3;
+
 .selects{
-  h2{
-    color: #ffff;
+  display:flex;
+  text-align: center;
+  h3{
+    font-weight: 900;
+    color:$color;
+  }
+  .items{
+    background-color: $bgNav;
+    width: 100%;
+  }
+  ul{
+    list-style-type: none;
+    li{
+      display: inline-block;
+      margin: 0 10px;
+    }
   }
   
 }
