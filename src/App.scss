@@ -1,4 +1,28 @@
+
+$bgNav: #224cc3;
+$navColor:rgba(255, 255, 255, 0.85);
+
+body{
+  margin: 0;
+}
 .container{
-  width: 90%;
-  margin: 20px auto;
+  .navbar{
+    background-color: $bgNav;
+    
+    width: 100%;
+    position: fixed;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    .h1{
+      color: $navColor;
+    }
+    .aside{
+      flex:2;
+    }
+    .content{
+      flex:4;
+    }
+  }
+
 }

@@ -4,7 +4,7 @@ import axios from 'axios'
 export function getTopCourses() {
   return dispatch => {
     return axios
-      .get(`https://api.cebroker.com/v2/featuredCoursesProfession?profession=${courseId}`)
+      .get(`https://api.cebroker.com/v2/featuredCoursesProfession?profession=26`)
       .then(res => {
         dispatch({
           type: "GET_TOP_COURSES",
@@ -20,12 +20,11 @@ export function getTopCourses() {
 export function getCourses() {
   return dispatch => {
     return axios
-      .get(`https://api.cebroker.com/v2/search/courses/?expand=totalItems&pageIndex=1&pageSize=18&sortField=RELEVA
-      NCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=27`)
+      .get(`https://api.cebroker.com/v2/search/courses/?expand=totalItems&pageIndex=1&pageSize=18&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=12`)
       .then(res => {
         dispatch({
           type: "GET_COURSES",
-          payload: res.data
+          payload: res.data.items
         })
       })
       .catch(err => {
