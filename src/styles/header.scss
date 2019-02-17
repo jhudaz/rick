@@ -1,0 +1,21 @@
+$background: #ffff;
+
+.header{
+  background-color: $background;
+  width: auto;
+  margin:0 -300px;
+  ul{
+    text-align: center;
+    list-style: none;
+    li{
+      display: inline-block;
+      margin: 15px 15px;
+    }
+    .buttons {
+      margin: 0 50px;
+      button{
+        margin: 0px 10px;
+      }
+    }
+  }
+}

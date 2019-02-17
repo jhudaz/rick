@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 //containers
+import Header from './header';
 import Select from './select';
 import Search from './search';
 import Menu from './menu';
@@ -25,12 +26,14 @@ class App extends Component {
   render() {
     return (
       <div>
+
         <div className="navbar">
           <div className="aside"></div>
           <div className="content">
-            <div className="select"><Select/></div>
-            <div className="search"><Search/></div>
-            <div className="search"><Menu/></div>
+            <div className="header"><Header /></div>
+            <div className="select"><Select /></div>
+            <div className="search"><Search /></div>
+            <div className="search"><Menu /></div>
             <div className="menu"></div>
           </div>
           <div className="aside"></div>
