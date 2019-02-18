@@ -1,3 +1,19 @@
+$color: #ffff;
 .menu{
-  margin:0 -300px;
+  $background: #3F51B5;
+  font-weight: 900;
+  ul{
+    text-align: center;
+    list-style: none;
+    background-color: #3F51B5;
+    li{
+      display: inline-block;
+      margin: 15px 15px;
+      color: $color;
+      margin: auto;
+      li:hover{
+        background-color: $color;
+      }
+    }
+  }
 }

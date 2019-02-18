@@ -16,12 +16,15 @@ class Courses extends Component {
     };
     return (
       <div className="aside">
-        <Card
+        <Card 
+          className="card"
           style={{ width: 300 }}
         >
           <h2>Filter Courses<Icon type="down" /></h2>
         </Card>
-        <Collapse defaultActiveKey={['1', '2', '3']} >
+        <Collapse
+          className="collapse"
+          defaultActiveKey={['1', '2', '3']} >
           <Panel header="Course type" key="1">
             <RadioGroup>
               <Radio style={radioStyle} >Self paced</Radio>

@@ -4,8 +4,12 @@
 @import './styles/search';
 @import './styles/select';
 
+$background: #3F51B5;
 body{
   margin: 0;
+}
+.navbar{
+  background-color: $background;
 }
 .body{
   display: flex;

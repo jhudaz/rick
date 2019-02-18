@@ -1,0 +1,12 @@
+$margin:40px;
+
+.aside{
+  .card{
+    padding: inherit;
+    text-align: center;
+    margin: $margin;
+  }
+  .collapse{
+    margin: $margin;
+  }
+}

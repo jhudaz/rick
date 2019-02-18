@@ -7,20 +7,17 @@ class Header extends Component {
     return (
       <div className="header">
 
-        <ul>
-          <li>ce broker</li>
+        <ul className="menuHeader">
           <li>Features</li>
           <li>Plans</li>
           <li>Organizations</li>
           <li>Brouse Courses</li>
           <li>Support</li>
-          <li>
-            <div className="buttons">
-              <button>Sign in</button>
-              <button>7 day trial</button>
-            </div>
-          </li>
         </ul>
+        <div className="buttons">
+          <button>Sign in</button>
+          <button>7 day trial</button>
+        </div>
 
       </div>
 

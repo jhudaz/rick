@@ -1,21 +1,32 @@
 $background: #ffff;
+$btnColor: #2ecc71;
+$color: #ffff;
+$hover: #4CAF50;
 
 .header{
   background-color: $background;
-  width: auto;
-  margin:0 -300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   ul{
+    margin: auto;
     text-align: center;
     list-style: none;
+    font-weight: 900;
     li{
       display: inline-block;
       margin: 15px 15px;
     }
-    .buttons {
-      margin: 0 50px;
-      button{
-        margin: 0px 10px;
-      }
+    li:hover{
+      color: $hover
+    }
+  }
+  .buttons {
+    margin: auto;
+    button{
+      margin: 0px 10px;
+      background-color: $btnColor;
+      color: $color;
     }
   }
 }
