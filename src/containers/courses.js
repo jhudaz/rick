@@ -55,6 +55,7 @@ class Courses extends Component {
           <label className="featured">FEATURED</label>
           <h2>{e.coursePublication.course.name}</h2>
           <h3>{e.coursePublication.course.provider.name}</h3>
+          <h3>{}</h3>
           <Button><Icon type="caret-right" /></Button>
         </Card>
       </li>

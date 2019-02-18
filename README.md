@@ -1,4 +1,4 @@
-# Morty App
+# Rick App
 ---
 ## Jaime Andres Velez Rojas
 course page, with the basic search functionality and pagination
