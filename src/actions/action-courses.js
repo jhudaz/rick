@@ -4,7 +4,7 @@ import axios from 'axios'
 export function getTopCourses() {
   return dispatch => {
     return axios
-      .get(`https://api.cebroker.com/v2/featuredCoursesProfession?profession=7`)
+      .get(`https://api.cebroker.com/v2/featuredCoursesProfession?profession=36`)
       .then(res => {
         dispatch({
           type: "GET_TOP_COURSES",

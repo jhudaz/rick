@@ -3,22 +3,23 @@
 @import './styles/menu';
 @import './styles/search';
 @import './styles/select';
+@import './styles/courses';
 
 $background: #3F51B5;
-body{
+body {
   margin: 0;
 }
-.navbar{
+.navbar {
   background-color: $background;
 }
-.body{
+.body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  .aside{
+  .aside {
     flex: 1;
   }
-  .content{
+  .content {
     flex: 4;
   }
 }
