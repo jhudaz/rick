@@ -26,24 +26,24 @@ class Courses extends Component {
           className="collapse"
           defaultActiveKey={['1', '2', '3']} >
           <Panel header="Course type" key="1">
-            <RadioGroup>
-              <Radio style={radioStyle} >Self paced</Radio>
-              <Radio style={radioStyle} >Live</Radio>
+            <RadioGroup value={1}>
+              <Radio style={radioStyle} value={1}>Self paced</Radio>
+              <Radio style={radioStyle} value={2}>Live</Radio>
             </RadioGroup>
           </Panel>
           <Panel header="Delivery type" key="2">
-            <RadioGroup>
-              <Radio style={radioStyle} >Any delivery type</Radio>
-              <Radio style={radioStyle} >Computer-Based Training</Radio>
-              <Radio style={radioStyle} >Correspondence</Radio>
-              <Radio style={radioStyle} >Mailed Material</Radio>
+            <RadioGroup value={1}>
+              <Radio style={radioStyle} value={1}>Any delivery type</Radio>
+              <Radio style={radioStyle} value={2}>Computer-Based Training</Radio>
+              <Radio style={radioStyle} value={3}>Correspondence</Radio>
+              <Radio style={radioStyle} value={4}>Mailed Material</Radio>
             </RadioGroup>
           </Panel>
           <Panel header="Subject area" key="3">
-            <RadioGroup>
-              <Radio style={radioStyle} >Any subject area</Radio>
-              <Radio style={radioStyle} >HIV/AIDS</Radio>
-              <Radio style={radioStyle} >End-of-life care and<br />Palliative Health Care</Radio>
+            <RadioGroup value={1}>
+              <Radio style={radioStyle} value={1}>Any subject area</Radio>
+              <Radio style={radioStyle} value={2}>HIV/AIDS</Radio>
+              <Radio style={radioStyle} value={3}>End-of-life care and<br />Palliative Health Care</Radio>
             </RadioGroup>
           </Panel>
         </Collapse>,

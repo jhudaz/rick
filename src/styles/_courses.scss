@@ -2,18 +2,48 @@ $feature: #2ecc71;
 
 .courses {
   .list{
-    margin: $margin;
+    margin-top: $margin;
+    .card{
+      width: 100%;
+      margin: 15px 0;
+      .ant-card-body {
+        display: flex;
+        padding: 10px;
+      }
+    }
     ul {
       list-style: none;
     }
     .img {
-      width: 400px;
-      height: 200px;
+      width: 250px;
+      height: 150px;
     }
-    .featured {
-      color: $feature;
-      border: 2px solid $feature;
-      font-weight: 900; 
+    .top {
+      margin: 0 10px;
+      .name {
+        font-size: 16px;
+      }
+      .provider {
+        color: #98b6b5;
+        font-size: 16px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 100;
+      }
+      .featured {
+        color: $feature;
+        border: 2px solid $feature;
+        font-weight: 900; 
+        font-size: 10px;
+        padding: 5px;
+      }
     }
+    .top2 {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
   }
 }

@@ -28,37 +28,39 @@ class Courses extends Component {
   //to create the list of normal courses 
   createCourses(e, i) {
     return (
-      <li key={i}>
-        <Card
-          className="card"
-          style={{ width: 500 }}
-        >
-          <h3>{e.course.name.toUpperCase()}</h3>
-          <h4>price: ${e.price}</h4>
-        </Card>
-      </li>
+      <Card
+        key={i}
+        className="card"
+      >
+        <h3>{e.course.name.toUpperCase()}</h3>
+        <h4>price: ${e.price}</h4>
+      </Card>
     )
   }
   //to create the top courses
   createTopCourses(e, i) {
     return (
-      <li key={i}>
-        <Card
-          className="card"
-          style={{ width: 500 }}
-        >
+      <Card
+        key={i}
+        className="card"
+      >
+        <div>
           <img
             className="img"
             src={`https://storage.cebroker.com/CEBroker/${e.coursePublication.course.featuredBanner}`}
             alt="Banner"
           />
+        </div>
+        <div className="top">
+          <h2 className="name">{e.coursePublication.course.name}</h2>
           <label className="featured">FEATURED</label>
-          <h2>{e.coursePublication.course.name}</h2>
-          <h3>{e.coursePublication.course.provider.name}</h3>
-          <h3>{}</h3>
+          <h3 className="provider">{e.coursePublication.course.provider.name}</h3>
+        </div>
+        <div className="top2">
+          <h3>$ {e.coursePublication.price === null ? '0' : e.coursePublication.price}</h3>
           <Button><Icon type="caret-right" /></Button>
-        </Card>
-      </li>
+        </div>
+      </Card>
     )
   }
   render() {
@@ -66,7 +68,6 @@ class Courses extends Component {
       <div className="courses">
         <Card
           className="card"
-          style={{ width: 700 }}
         >
           <Pagination
             defaultCurrent={1}
@@ -75,13 +76,9 @@ class Courses extends Component {
             onChange={this.pagination}
             total={this.props.reducerApp.courses.totalItems} />
           <div className="list">
-            <ul>
-              {this.props.reducerApp.top.map((e, i) => this.createTopCourses(e, i))}
-            </ul>
+            {this.props.reducerApp.top.map((e, i) => this.createTopCourses(e, i))}
             <br />
-            <ul>
-              {this.props.reducerApp.courses.items.map((e, i) => this.createCourses(e, i))}
-            </ul>
+            {this.props.reducerApp.courses.items.map((e, i) => this.createCourses(e, i))}
           </div>
         </Card>
       </div >
