@@ -1,7 +1,10 @@
 function getInitialState() {
   return {
     top: [],
-    courses: []
+    courses: {
+      items: [],
+      totalItems: 0
+    }
   }
 }
 

@@ -24,10 +24,10 @@ class MenuComp extends Component {
           selectedKeys={[this.state.current]}
           mode="horizontal"
         >
-          <Menu.Item key="COURSES">
+          <Menu.Item key="COURSES" className="items">
             COURSES
           </Menu.Item>
-          <Menu.Item key="PROVIDERS">
+          <Menu.Item key="PROVIDERS" className="items">
             PROVIDERS
           </Menu.Item>
         </Menu>

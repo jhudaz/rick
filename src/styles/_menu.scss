@@ -2,6 +2,12 @@ $color: #ffff;
 .menu{
   $background: #3F51B5;
   font-weight: 900;
+  .items:hover{
+    color: $color;
+  }
+  .ant-menu-item-selected{
+    color: $color;
+  }
   ul{
     text-align: center;
     list-style: none;

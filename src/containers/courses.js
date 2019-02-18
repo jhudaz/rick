@@ -1,35 +1,39 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Card } from 'antd';
+import { Card, Pagination } from 'antd';
 
 import { getTopCourses, getCourses } from '../actions';
 
 import '../App.scss';
 
 class Courses extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state={
+    this.state = {
       page: 1
     }
     this.createCourses = this.createCourses.bind(this);
+    this.pagination = this.pagination.bind(this);
   }
   //to call the api's to bring the courses data
   componentDidMount() {
     this.props.getTopCourses();
     this.props.getCourses(this.state.page);
   }
+  pagination(int){
+    this.props.getCourses(int);
+  }
   //to create the list of normal courses 
-  createCourses(e,i){
-    return(
+  createCourses(e, i) {
+    return (
       <li key={i}>
-        <Card 
+        <Card
           className="card"
-          style={{ width: 600 }}
+          style={{ width: 500 }}
         >
-       <h3>{e.course.name.toUpperCase()}</h3>
-       <h4>price: ${e.price}</h4> 
+          <h3>{e.course.name.toUpperCase()}</h3>
+          <h4>price: ${e.price}</h4>
         </Card>
       </li>
     )
@@ -37,10 +41,21 @@ class Courses extends Component {
   render() {
     return (
       <div className="courses">
-        <ul>
-          {this.props.reducerApp.courses.map((e,i) => this.createCourses(e,i))}
-        </ul>
-      </div>
+        <Card
+          className="card"
+          style={{ width: 500 }}
+        >
+          <Pagination 
+            defaultCurrent={1} 
+            currrent={this.state.page}
+            pageSize={18}
+            onChange={this.pagination}
+            total={this.props.reducerApp.courses.totalItems} />
+          <ul>
+            {this.props.reducerApp.courses.items.map((e, i) => this.createCourses(e, i))}
+          </ul>
+        </Card>
+      </div >
     )
   }
 }

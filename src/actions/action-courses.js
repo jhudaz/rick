@@ -17,14 +17,19 @@ export function getTopCourses() {
   }
 }
 //action to get other courses by page
-export function getCourses(page) {
+export function getCourses(page, courseName = '') {
   return dispatch => {
+    let url = `https://api.cebroker.com/v2/search/courses/?expand=totalItems&pageIndex=1&pageSize=18&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=${page}`;
+    if(courseName !== '') {
+      url += `&courseName=${courseName}`; 
+    }
+    console.log('URL:', url);
     return axios
-      .get(`https://api.cebroker.com/v2/search/courses/?expand=totalItems&pageIndex=1&pageSize=18&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=${page}`)
+      .get(url)
       .then(res => {
         dispatch({
           type: "GET_COURSES",
-          payload: res.data.items
+          payload: res.data
         })
       })
       .catch(err => {
