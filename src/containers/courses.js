@@ -49,7 +49,7 @@ class Courses extends Component {
         >
           <img
             className="img"
-            src={`https://storage.cebroker.com/CEBroker/${e.coursePublication.course.featuredBanner}`} 
+            src={`https://storage.cebroker.com/CEBroker/${e.coursePublication.course.featuredBanner}`}
             alt="Banner"
           />
           <label className="featured">FEATURED</label>
@@ -65,7 +65,7 @@ class Courses extends Component {
       <div className="courses">
         <Card
           className="card"
-          style={{ width: 500 }}
+          style={{ width: 700 }}
         >
           <Pagination
             defaultCurrent={1}
@@ -73,13 +73,15 @@ class Courses extends Component {
             pageSize={18}
             onChange={this.pagination}
             total={this.props.reducerApp.courses.totalItems} />
-          <ul>
-            {this.props.reducerApp.top.map((e, i) => this.createTopCourses(e, i))}
-          </ul>
-          <br />
-          <ul>
-            {this.props.reducerApp.courses.items.map((e, i) => this.createCourses(e, i))}
-          </ul>
+          <div className="list">
+            <ul>
+              {this.props.reducerApp.top.map((e, i) => this.createTopCourses(e, i))}
+            </ul>
+            <br />
+            <ul>
+              {this.props.reducerApp.courses.items.map((e, i) => this.createCourses(e, i))}
+            </ul>
+          </div>
         </Card>
       </div >
     )

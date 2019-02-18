@@ -1,16 +1,19 @@
 $feature: #2ecc71;
 
 .courses {
-  ul {
-    list-style: none;
-  }
-  .img {
-    width: 400px;
-    height: 200px;
-  }
-  .featured {
-    color: $feature;
-    border: 2px solid $feature;
-    font-weight: 900; 
+  .list{
+    margin: $margin;
+    ul {
+      list-style: none;
+    }
+    .img {
+      width: 400px;
+      height: 200px;
+    }
+    .featured {
+      color: $feature;
+      border: 2px solid $feature;
+      font-weight: 900; 
+    }
   }
 }
