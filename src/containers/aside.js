@@ -20,7 +20,7 @@ class Courses extends Component {
           className="card"
           style={{ width: 300 }}
         >
-          <h2>Filter Courses<Icon type="down" /></h2>
+          <h2><Icon type="down" />Filter Course Results</h2>
         </Card>
         <Collapse
           className="collapse"

@@ -1,14 +1,24 @@
 $feature: #2ecc71;
 
 .courses {
-  .list{
+  .list {
     margin-top: $margin;
-    .card{
+    .card {
       width: 100%;
       margin: 15px 0;
       .ant-card-body {
         display: flex;
         padding: 10px;
+      }
+      .name {
+        font-size: 16px;
+      }
+      .provider {
+        color: #98b6b5;
+        font-size: 16px;
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 100;
       }
     }
     ul {

@@ -32,8 +32,16 @@ class Courses extends Component {
         key={i}
         className="card"
       >
-        <h3>{e.course.name.toUpperCase()}</h3>
-        <h4>price: ${e.price}</h4>
+        <div>
+          <h3 className="name">{e.course.name}</h3>
+          <h3 className="provider">{e.course.provider.name}</h3>
+        </div>
+
+        <div className="buttons">
+          <h4>$ {e.price}</h4>
+          <Button><Icon type="caret-right" /></Button>
+        </div>
+
       </Card>
     )
   }
