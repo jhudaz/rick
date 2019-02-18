@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Input } from 'antd';
+import { Input, Icon} from 'antd';
 import { getCourses } from '../actions';
 
 import '../App.scss';
@@ -12,12 +12,19 @@ class SearchComp extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      size: 'large'
+      size: 'large',
+      loading: false
     }
     this.searchCourses = this.searchCourses.bind(this);
   }
   searchCourses(str) {
-    this.props.getCourses(1, str);
+    this.setState({ loading: true })
+    this.props.getCourses(1, str).then(() => {
+      this.setState({ loading: false });
+    }).catch(() => {
+      this.setState({ loading: false });
+    })
+
   }
   render() {
     return (
@@ -29,6 +36,7 @@ class SearchComp extends Component {
           onSearch={this.searchCourses}
           style={{ width: 700 }}
         />
+        {this.state.loading && <Icon type="loading" className="loader" />}
       </div>
     )
   }

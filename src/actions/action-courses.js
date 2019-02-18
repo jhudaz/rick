@@ -23,7 +23,6 @@ export function getCourses(page, courseName = '') {
     if(courseName !== '') {
       url += `&courseName=${courseName}`; 
     }
-    console.log('URL:', url);
     return axios
       .get(url)
       .then(res => {

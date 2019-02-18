@@ -9,6 +9,10 @@ $feature: #2ecc71;
       .ant-card-body {
         display: flex;
         padding: 10px;
+        justify-content: space-between;
+        &:before, &:after {
+          content: none;
+        }
       }
       .name {
         font-size: 16px;
