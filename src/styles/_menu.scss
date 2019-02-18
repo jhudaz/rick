@@ -11,9 +11,9 @@ $color: #ffff;
       margin: 15px 15px;
       color: $color;
       margin: auto;
-      li:hover{
-        background-color: $color;
-      }
+    }
+    li:hover{
+      background-color: $color;
     }
   }
 }

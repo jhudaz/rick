@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-//action to get the featured Courses
+//action to get the featured courses
 export function getTopCourses() {
   return dispatch => {
     return axios
@@ -16,11 +16,11 @@ export function getTopCourses() {
       })
   }
 }
-//action to get other courses
-export function getCourses() {
+//action to get other courses by page
+export function getCourses(page) {
   return dispatch => {
     return axios
-      .get(`https://api.cebroker.com/v2/search/courses/?expand=totalItems&pageIndex=1&pageSize=18&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=12`)
+      .get(`https://api.cebroker.com/v2/search/courses/?expand=totalItems&pageIndex=1&pageSize=18&sortField=RELEVANCE&profession=36&courseType=CD_ANYTIME&sortShufflingSeed=${page}`)
       .then(res => {
         dispatch({
           type: "GET_COURSES",

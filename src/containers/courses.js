@@ -2,20 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Card } from 'antd';
-//actions
+
 import { getTopCourses, getCourses } from '../actions';
-//styles
+
 import '../App.scss';
 
 class Courses extends Component {
   constructor(props){
     super(props)
+    this.state={
+      page: 1
+    }
     this.createCourses = this.createCourses.bind(this);
   }
   //to call the api's to bring the courses data
   componentDidMount() {
     this.props.getTopCourses();
-    this.props.getCourses();
+    this.props.getCourses(this.state.page);
   }
   //to create the list of normal courses 
   createCourses(e,i){
@@ -25,7 +28,7 @@ class Courses extends Component {
           className="card"
           style={{ width: 600 }}
         >
-       <h3>{e.course.name}</h3>
+       <h3>{e.course.name.toUpperCase()}</h3>
        <h4>price: ${e.price}</h4> 
         </Card>
       </li>
