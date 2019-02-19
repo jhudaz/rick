@@ -17,6 +17,7 @@ class SearchComp extends Component {
     }
     this.searchCourses = this.searchCourses.bind(this);
   }
+  //to call the api to bring courses when the user types something in the input and display a loader
   searchCourses(str) {
     this.setState({ loading: true })
     this.props.getCourses(1, str).then(() => {
@@ -42,15 +43,15 @@ class SearchComp extends Component {
   }
 }
 //reducers
-function mapStateToProps({ reducerApp }) {
-  return {
-    reducerApp
-  }
-}
+// function mapStateToProps({ reducerApp }) {
+//   return {
+//     reducerApp
+//   }
+// }
 //actions
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     getCourses
   }, dispatch)
 }
-export default connect(mapStateToProps, mapDispatchToProps)(SearchComp);
+export default connect(null, mapDispatchToProps)(SearchComp);

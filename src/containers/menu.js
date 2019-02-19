@@ -11,6 +11,7 @@ class MenuComp extends Component {
     }
     this.handleClick = this.handleClick.bind(this);
   }
+  //to handle the menu item selected
   handleClick(e) {
     this.setState({
       current: e.key,

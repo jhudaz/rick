@@ -22,6 +22,7 @@ class Courses extends Component {
     this.props.getTopCourses();
     this.props.getCourses(this.state.page);
   }
+  //to call the api evry time that the user use the pagination
   pagination(int) {
     this.props.getCourses(int);
   }

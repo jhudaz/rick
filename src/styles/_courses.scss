@@ -1,5 +1,5 @@
 $feature: #2ecc71;
-
+$provider: #98b6b5;
 .courses {
   .list {
     margin-top: $margin;
@@ -18,7 +18,7 @@ $feature: #2ecc71;
         font-size: 16px;
       }
       .provider {
-        color: #98b6b5;
+        color: $provider;
         font-size: 16px;
         margin-top: 10px;
         font-size: 15px;
@@ -34,15 +34,10 @@ $feature: #2ecc71;
     }
     .top {
       margin: 0 10px;
+      flex: 2;
+      @extend .provider ;
       .name {
         font-size: 16px;
-      }
-      .provider {
-        color: #98b6b5;
-        font-size: 16px;
-        margin-top: 10px;
-        font-size: 15px;
-        font-weight: 100;
       }
       .featured {
         color: $feature;

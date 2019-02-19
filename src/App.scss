@@ -5,13 +5,15 @@
 @import './styles/select';
 @import './styles/courses';
 
-$background: #3F51B5;
+$background1: #3F51B5;
+$background2:#f6fbfc;
+
 body {
   margin: 0;
-  background-color: #f6fbfc; 
+  background-color: $background2; 
 }
 .navbar {
-  background-color: $background;
+  background-color: $background1;
 }
 .body {
   display: flex;

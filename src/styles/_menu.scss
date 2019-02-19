@@ -1,6 +1,6 @@
 $color: #ffff;
+$background: #3F51B5;
 .menu{
-  $background: #3F51B5;
   font-weight: 900;
   .items:hover{
     color: $color;
@@ -11,9 +11,8 @@ $color: #ffff;
   ul{
     text-align: center;
     list-style: none;
-    background-color: #3F51B5;
+    background-color: $background;
     li{
-      display: inline-block;
       margin: 15px 15px;
       color: $color;
       margin: auto;
