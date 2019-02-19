@@ -34,10 +34,30 @@ $ yarn install
 
 ### Run the aplication
 
-Development environment
+Development environment, the app is running in the port 3000 by default
 ```sh
 $ yarn start
 ```
+this will display the app on the browser
+![app](https://raw.githubusercontent.com/jhudaz/Rick/master/resources/images/app.png)
+
+
+### Test
+
+You must have running the app, to make the test so in another console you have to use the next command
+
+```sh
+$ yarn run cypress:open
+```
+This will display a window like this one
+
+![cypress-open](https://raw.githubusercontent.com/jhudaz/Rick/master/resources/images/cypress-open.png)
+
+you must click on the file `test_spec.js` and this will open the cypress browser,
+where you can see every step of the test with it result
+
+![cypress-test](https://raw.githubusercontent.com/jhudaz/Rick/master/resources/images/cypress-test.png)
+
 ### Notes
 
 the API for the pagination always returns the same data, no matter what id is passed, that's why  every time that pagination is used the view doesn't change.
