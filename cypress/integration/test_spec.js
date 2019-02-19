@@ -7,6 +7,6 @@ describe('Testing', function () {
       .should(($p) => {
         // should have found 3 elements
         expect($p).to.have.length(3)
-      }
+      })
   })
 })
