@@ -15,9 +15,9 @@ course page, with the basic search functionality and pagination
 
 
 ###  Download
-Download from the repository [here](https://github.com/jhudaz/rick), or use the git command to clone it:
+Download from the repository [here](https://github.com/jhudaz/Rick), or use the git command to clone it:
 ```sh
-$ git clone https://github.com/jhudaz/rick.git
+$ git clone https://github.com/jhudaz/Rick.git
 ```
 ### Installation
 #### Requirements

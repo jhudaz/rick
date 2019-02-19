@@ -42,13 +42,6 @@ class SearchComp extends Component {
     )
   }
 }
-//reducers
-// function mapStateToProps({ reducerApp }) {
-//   return {
-//     reducerApp
-//   }
-// }
-//actions
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     getCourses

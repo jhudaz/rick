@@ -1,24 +1,18 @@
-$color: #ffff;
+$color: #fff;
+$hoverColor: #4CAF50;
 $background: #3F51B5;
 .menu{
   font-weight: 900;
+  display: flex;
+  flex-direction: row;
+
+  .items {
+    padding: 15px;
+    color: $color;
+    cursor: pointer;
+  }
   .items:hover{
-    color: $color;
+    color: $hoverColor;
   }
-  .ant-menu-item-selected{
-    color: $color;
-  }
-  ul{
-    text-align: center;
-    list-style: none;
-    background-color: $background;
-    li{
-      margin: 15px 15px;
-      color: $color;
-      margin: auto;
-    }
-    li:hover{
-      background-color: $color;
-    }
-  }
+  
 }
