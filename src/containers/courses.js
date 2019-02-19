@@ -79,6 +79,7 @@ class Courses extends Component {
           className="card"
         >
           <Pagination
+            class="pages"
             defaultCurrent={1}
             currrent={this.state.page}
             pageSize={18}
