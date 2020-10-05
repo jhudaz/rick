@@ -29,14 +29,14 @@ Install the dependencies.
 
 ```sh
 $ cd rick
-$ yarn install
+$ npmi install
 ```
 
 ### Run the aplication
 
 Development environment, the app is running in the port 3000 by default
 ```sh
-$ yarn start
+$ npm start
 ```
 this will display the app on the browser
 ![app](https://raw.githubusercontent.com/jhudaz/Rick/master/resources/images/app.png)
@@ -47,7 +47,7 @@ this will display the app on the browser
 You must have running the app, to make the test so in another console you have to use the next command
 
 ```sh
-$ yarn run cypress:open
+$ npm run cypress:open
 ```
 This will display a window like this one
 
