@@ -8,10 +8,10 @@ class MenuComp extends Component {
     return (
       <div className="menu">
         <div className="items">
-          COURSES
+          Courses
         </div>
         <div className="items">
-          PROVIDERS
+          Providers
         </div>
       </div>
     )
